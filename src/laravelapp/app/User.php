@@ -39,9 +39,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function folders()
+    public function beans()
     {
-        return $this->hasMany('App\Folder');
+        return $this->hasMany('App\Bean');
     }
     public function sendPasswordResetNotification($token)
     {

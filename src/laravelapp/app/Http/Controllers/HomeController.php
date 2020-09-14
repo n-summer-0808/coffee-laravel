@@ -11,16 +11,10 @@ class HomeController extends Controller
     {
         // ログインユーザーを取得
         $user = Auth::user();
-        // ログインユーザーに紐づくフォルダを一つ取得
-        $folder = $user->folders()->first();
-
-        // まだ一つもフォルダを作っていなければホームページ
-        if (is_null($folder)) {
-            return view('home');
-        }
+        return view('home');
         // フォルダがあればそのフォルダのタスク一覧
-        return redirect()->route('tasks.index', [
-            'folder' => $folder->id,
-        ]);
+        // return redirect()->route('tasks.index', [
+        //     'folder' => $folder->id,
+        // ]);
     }
 }

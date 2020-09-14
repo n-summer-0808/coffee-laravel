@@ -22,9 +22,9 @@ services:
    # コンテナ内の環境変数を指定。環境変数を渡すとビルド時に設定してくれるDockerイメージがあるので、利用の際はDocker Hubのサイトで確認すると良い
    environment:
      MYSQL_ROOT_PASSWORD: root
-     MYSQL_DATABASE: todo
-     MYSQL_USER: root
-     MYSQL_PASSWORD: root
+     MYSQL_DATABASE: coffee
+     MYSQL_USER: natsumi
+     MYSQL_PASSWORD: ars6211
      TZ: 'Asia/Tokyo'
    # 起動時のコマンド
    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
